@@ -1,4 +1,4 @@
-from backend.models.skill_list import SKILLS
+from models.skill_list import SKILLS
 
 def extract_job_skills(job_desc):
     job_desc = job_desc.lower()

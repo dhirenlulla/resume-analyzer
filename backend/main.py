@@ -1,12 +1,12 @@
 from fastapi import FastAPI, UploadFile, File, Form
-from backend.services.parser import extract_text_from_pdf
-from backend.services.skills import extract_skills
-from backend.services.ats import calculate_ats_score
-from backend.services.sections import extract_sections
-from backend.services.experience import extract_experience
-from backend.services.matcher import extract_job_skills, skill_gap_analysis
-from backend.services.scorer import resume_score_breakdown
-from backend.services.llm import generate_suggestions
+from services.parser import extract_text_from_pdf
+from services.skills import extract_skills
+from services.ats import calculate_ats_score
+from services.sections import extract_sections
+from services.experience import extract_experience
+from services.matcher import extract_job_skills, skill_gap_analysis
+from services.scorer import resume_score_breakdown
+from services.llm import generate_suggestions
 
 app = FastAPI()
 
