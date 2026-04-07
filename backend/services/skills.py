@@ -1,5 +1,5 @@
 import spacy
-from backend.models.skill_list import SKILLS
+from models.skill_list import SKILLS
 
 nlp = spacy.load("en_core_web_sm")
 
