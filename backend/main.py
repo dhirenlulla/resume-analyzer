@@ -6,7 +6,9 @@ from services.sections import extract_sections
 from services.experience import extract_experience
 from services.matcher import extract_job_skills, skill_gap_analysis
 from services.scorer import resume_score_breakdown
-from services.llm import generate_suggestions
+# from services.llm import generate_suggestions
+
+print("🔥 MAIN STARTED")
 
 app = FastAPI()
 
@@ -26,7 +28,7 @@ async def analyze(file: UploadFile = File(...), job_desc: str = Form(...)):
 
     final_score = resume_score_breakdown(ats, len(skills), experience)
 
-    suggestions = generate_suggestions(text)
+    # suggestions = generate_suggestions(text)
 
     return {
         "ats_score": ats,
@@ -35,5 +37,5 @@ async def analyze(file: UploadFile = File(...), job_desc: str = Form(...)):
         "experience_years": experience,
         "sections": sections,
         "skill_gap": gap,
-        "suggestions": suggestions
+        "suggestions": []
     }
